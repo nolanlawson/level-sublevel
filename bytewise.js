@@ -1,9 +1,10 @@
 var nut     = require('./nut')
 var shell   = require('./shell') //the shell surrounds the nut
-var codec   = require('levelup/lib/codec')
+var Codec   = require('level-codec')
+var codec   = new Codec()
 var merge   = require('xtend')
 var compare = require('typewiselite')
-var ReadStream = require('levelup/lib/read-stream')
+var ReadStream = require('level-iterator-stream')
 
 var precodec = require('./codec/bytewise')
 
